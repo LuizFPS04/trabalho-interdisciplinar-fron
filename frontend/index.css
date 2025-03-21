@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+}
+
+/* Carousel container styles */
+.carousel-container {
+  padding: 0 60px;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+}
+
+/* Quiz card wrapper styles */
+.quiz-card-wrapper {
+  padding: 0 15px;
+  height: 400px;
+}
+
+/* Slick carousel custom styles */
+.slick-slider {
+  margin-bottom: 40px;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  width: 40px !important;
+  height: 40px !important;
+  background: transparent !important;
+  transition: all 0.3s ease !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  opacity: 0.7 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.slick-prev {
+  left: -50px !important;
+}
+
+.slick-next {
+  right: -50px !important;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 1 !important;
+  transform: scale(1.1);
+}
+
+.slick-dots {
+  bottom: -30px !important;
+}
+
+.slick-dots li button:before {
+  color: #ffffff !important;
+  opacity: 0.7 !important;
+  font-size: 12px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  color: #22c55e !important;
+}
+
+/* Smooth transition for quiz cards */
+.quiz-card-wrapper .quiz-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.quiz-card-wrapper:hover .quiz-card {
+  transform: translateY(-5px);
+}
